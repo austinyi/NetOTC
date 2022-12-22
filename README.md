@@ -1,14 +1,15 @@
-# GraphOTC
+# NetOTC
  
-This is the official repository for the paper titled "Graph Optimal Transport with Transition Couplings of Random Walks" by O'Connor et al. It contains a Matlab implementation of GraphOTC as well as the other Graph OT methods used as baselines. Moreover, code for reproducing experimental results and examples from the paper is also included.
+This is the official repository for the paper titled "Alignment and Comparison of Directed Networks via
+Transition Couplings of Random Walks" by Bongsoo yi, Kevin O'Connor, Kevin McGoff, Andrew B. Nobel. It contains a Matlab implementation of NetOTC as well as the other Graph OT methods used as baselines. Moreover, code for reproducing experimental results and examples from the paper is also included.
 
-## Running GraphOTC
-In order to run the GraphOTC algorithm on weighted adjacency matrices `A1` and `A2` with cost matrix `c`, first transform to transition matrices as follows:
+## Running NetOTC
+In order to run the NetOTC algorithm on weighted adjacency matrices `A1` and `A2` with cost matrix `c`, first transform to transition matrices as follows:
 ```
 P1 = adj_to_trans(A1);
 P2 = adj_to_trans(A2);
 ```
-Then, we can run GraphOTC using the ExactOTC algorithm by calling
+Then, we can run NetOTC using the ExactOTC algorithm by calling
 ```
 [gotc_cost, gotc, node_alignment] = exact_otc(P1, P2, c);
 ```
@@ -21,14 +22,14 @@ The parameters `L` and `T` are used in the ApproxTCE step that approximately eva
 In order to the mass assigned to a pair of edges `(x1, x2)` and `(y1, y2)`, compute `node_alignment(x1, y1)*gotc((x1, y1), (x2, y2))`. For an example of this, please refer to `pc_align_exp.m`.
 
 ## Running Experiments and Examples
-Code for reproducing the examples and experimental results described in the paper may be found in the folders `examples` and `experiments`. Note that you will have to modify any directories in the scripts before you run them. Moreover, the classification experiment code should be run with `longleaf=0`.
+Code for reproducing the examples and experimental results described in the paper may be found in the folders `examples` and `experiments`. Note that you will have to modify any directories in the scripts before you run them. Moreover, the isomorphism and classification experiment code should be run with `longleaf=0`.
 
 ## Citing this Repository
 If you wish to cite our work, please use the following BibTeX code:
 ```
-@article{o2021graph,
-  title={Graph Optimal Transport with Transition Couplings of Random Walks},
-  author={O'Connor, Kevin and Yi, Bongsoo and McGoff, Kevin and Nobel, Andrew B},
+@article{yi2021graph,
+  title={Alignment and Comparison of Directed Networks via Transition Couplings of Random Walks},
+  author={Yi, Bongsoo O'Connor, Kevin and McGoff, Kevin and Nobel, Andrew B},
   journal={arXiv preprint arXiv:2106.07106},
   year={2021}
 }
