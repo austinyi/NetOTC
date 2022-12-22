@@ -22,7 +22,7 @@ The parameters `L` and `T` are used in the ApproxTCE step that approximately eva
 In order to the mass assigned to a pair of edges `(x1, x2)` and `(y1, y2)`, compute `node_alignment(x1, y1)*gotc((x1, y1), (x2, y2))`. For an example of this, please refer to `pc_align_exp.m`.
 
 ## Running Experiments and Examples
-Code for reproducing the examples and experimental results described in the paper may be found in the folders `examples` and `experiments`. Note that you will have to modify any directories in the scripts before you run them. Moreover, the isomorphism and classification experiment code should be run with `longleaf=0`.
+Code for reproducing the examples and experimental results described in the paper may be found in the folder `experiments`. Note that you will have to modify any directories in the scripts before you run them. Moreover, the isomorphism and classification experiment code should be run with `longleaf=0`.
 
 ## Citing this Repository
 If you wish to cite our work, please use the following BibTeX code:
