@@ -22,7 +22,7 @@ while max(max(abs(P-P_old))) > 1e-10
     
     % Check for convergence.
     if all(all(P == P_old))
-        stat_dist = get_best_stat_dist3(P);
+        stat_dist = get_stat_dist(P);
         stat_dist = reshape(stat_dist, dy, dx)';
         exp_cost = sum(stat_dist .* c, 'all');
         return
