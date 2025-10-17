@@ -19,7 +19,7 @@ For moderately sized networks, one may want to use the more efficient EntropicOT
 ```
 The parameters `L` and `T` are used in the ApproxTCE step that approximately evaluates the current transition coupling; the parameters `xi` and `sink_iter` are used in the EntropicTCI step that uses Sinkhorn's algorithm to improve the transition coupling. Larger values of each of these parameters will give a better approximation of ExactOTC at the expense of increased runtime. Finally, the parameter `get_sd` indicates whether the node alignment should be computed and returned. Setting this to 0 when the node alignment is not needed can save some time for larger networks.
 
-In order to the mass assigned to a pair of edges `(x1, x2)` and `(y1, y2)`, compute `node_alignment(x1, y1)*gotc((x1, y1), (x2, y2))`. For an example of this, please refer to `pc_align_exp.m`.
+In order to compute the mass assigned to a pair of edges `(x1, x2)` and `(y1, y2)`, compute `node_alignment(x1, y1)*gotc((x1, y1), (x2, y2))`. For an example of this, please refer to `pc_align_exp.m`.
 
 ## Running Experiments and Examples
 Code for reproducing the examples and experimental results described in the paper may be found in the folder `experiments`. Note that you will have to modify any directories in the scripts before you run them. Moreover, the isomorphism and classification experiment code should be run with `longleaf=0`.
@@ -27,10 +27,12 @@ Code for reproducing the examples and experimental results described in the pape
 ## Citing this Repository
 If you wish to cite our work, please use the following BibTeX code:
 ```
-@article{yi2021graph,
-  title={Alignment and Comparison of Directed Networks via Transition Couplings of Random Walks},
-  author={Yi, Bongsoo O'Connor, Kevin and McGoff, Kevin and Nobel, Andrew B},
-  journal={arXiv preprint arXiv:2106.07106},
-  year={2021}
+@article{yi2025alignment,
+  title={Alignment and comparison of directed networks via transition couplings of random walks},
+  author={Yi, Bongsoo and O'Connor, Kevin and McGoff, Kevin and Nobel, Andrew B},
+  journal={Journal of the Royal Statistical Society Series B: Statistical Methodology},
+  pages={qkae085},
+  year={2024},
+  doi = {10.1093/jrsssb/qkae085}
 }
 ```
